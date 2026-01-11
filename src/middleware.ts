@@ -5,8 +5,17 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
+import { initializeSeedData } from '@/lib/storage';
+
+// Initialize seed data on first request
+let isInitialized = false;
 
 export function middleware(request: NextRequest) {
+  // Initialize seed data once
+  if (!isInitialized) {
+    initializeSeedData();
+    isInitialized = true;
+  }
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, {

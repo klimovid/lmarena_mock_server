@@ -4,13 +4,16 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getUserChats } from '@/lib/storage';
+import { getUserChats, initializeSeedData } from '@/lib/storage';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
+    // Initialize seed data
+    initializeSeedData();
+    
     const userId = params.id;
     const url = new URL(request.url);
     

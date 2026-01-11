@@ -4,13 +4,16 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getChat, getChatTurns, getTurnMessages } from '@/lib/storage';
+import { getChat, getChatTurns, getTurnMessages, initializeSeedData } from '@/lib/storage';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
+    // Initialize seed data on first request
+    initializeSeedData();
+    
     const chatId = params.id;
 
     // Get chat
