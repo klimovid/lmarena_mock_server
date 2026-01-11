@@ -96,6 +96,19 @@ export const mockCategories: Category[] = [
       { id: '14', name: 'Facebook Ads', slug: 'facebook-ads', usage_count: 28 },
     ],
   },
+  {
+    id: '5',
+    name: 'QWE',
+    slug: 'qwe',
+    description: 'Quick Web Engineering',
+    sort_order: 5,
+    tags: [
+      { id: '15', name: 'Frontend Development', slug: 'frontend-dev', usage_count: 52 },
+      { id: '16', name: 'Backend APIs', slug: 'backend-apis', usage_count: 48 },
+      { id: '17', name: 'Database Design', slug: 'database-design', usage_count: 41 },
+      { id: '18', name: 'DevOps & Deployment', slug: 'devops-deployment', usage_count: 36 },
+    ],
+  },
 ];
 
 /**
@@ -169,6 +182,30 @@ export const mockPromptSuggestions: PromptSuggestion[] = [
     title: 'Facebook Ad Headline',
     text: 'Write 5 attention-grabbing Facebook ad headlines for a fitness app targeting busy professionals',
     category: 'PPC',
+  },
+  {
+    id: '9',
+    title: 'React Component',
+    text: 'Create a reusable React component for a pagination control with TypeScript support and accessibility features',
+    category: 'QWE',
+  },
+  {
+    id: '10',
+    title: 'REST API Endpoint',
+    text: 'Design a RESTful API endpoint for user authentication with JWT tokens and refresh token rotation',
+    category: 'QWE',
+  },
+  {
+    id: '11',
+    title: 'Database Schema',
+    text: 'Create a PostgreSQL schema for an e-commerce platform with proper indexing and relationships',
+    category: 'QWE',
+  },
+  {
+    id: '12',
+    title: 'Docker Configuration',
+    text: 'Write a Dockerfile and docker-compose.yml for a Node.js microservice with MongoDB and Redis',
+    category: 'QWE',
   },
 ];
 
